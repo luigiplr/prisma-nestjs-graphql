@@ -16,22 +16,22 @@
     "prisma-generator",
     "nestjs-graphql"
   ],
-  "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
+  "main": "./index.cjs",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
     },
     "./generate": {
-      "require": "./dist/generate.cjs",
-      "types": "./dist/generate.d.ts"
+      "require": "./generate.cjs",
+      "types": "./generate.d.ts"
     }
   },
   "typesVersions": {
     "*": {
       "generate": [
-        "dist/generate.d.ts"
+        "./generate.d.ts"
       ]
     }
   },
