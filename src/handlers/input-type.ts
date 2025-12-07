@@ -134,9 +134,6 @@ export function inputType(
 
     if (propertySettings) {
       importDeclarations.create({ ...propertySettings });
-    } else if (propertyType.includes('Decimal')) {
-      // TODO: Deprecated and should be removed
-      importDeclarations.add('Decimal', `${config.prismaClientImport}/runtime/library`);
     } else if (propertyType.some(p => p.startsWith('Prisma.'))) {
       importDeclarations.add('Prisma', config.prismaClientImport);
     }

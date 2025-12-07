@@ -428,7 +428,7 @@ describe('one model with scalar types', () => {
       });
 
       it('money', () => {
-        expect(p('money')?.type).toEqual('Decimal');
+        expect(p('money')?.type).toEqual('Prisma.Decimal');
       });
     });
 
@@ -688,7 +688,7 @@ describe('nullish compatibility', () => {
 
   it('money', () => {
     const s = testSourceFile({ file: 'user.model.ts', project, property: 'money' });
-    expect(s.property?.type).toEqual('Decimal | null');
+    expect(s.property?.type).toEqual('Prisma.Decimal | null');
     expect(s.property?.hasQuestionToken).toBe(false);
     expect(imports).toContainEqual({
       name: 'GraphQLDecimal',

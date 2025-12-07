@@ -161,8 +161,8 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
 
     if (propertySettings) {
       importDeclarations.create({ ...propertySettings });
-    } else if (propertyType.includes('Decimal')) {
-      importDeclarations.add('Decimal', `${config.prismaClientImport}/runtime/library`);
+    } else if (propertyType.includes('Prisma.Decimal')) {
+      importDeclarations.add('Prisma', config.prismaClientImport);
     }
 
     ok(property.decorators, 'property.decorators is undefined');
